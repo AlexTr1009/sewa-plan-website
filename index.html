@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SewaPlan | KI-Fachassistenz für ambulante Pflegeplanung</title>
+    <meta
+      name="description"
+      content="SewaPlan ist die KI-Fachassistenz für ambulante Pflegeplanung. Pflegepläne nach AEDL auf Basis von aktuellen Expertenstandards und Assessments strukturiert erstellen und validieren."
+    />
+    <meta property="og:title" content="SewaPlan | KI-Fachassistenz für ambulante Pflegeplanung" />
+    <meta property="og:description" content="SewaPlan unterstützt Pflegeteams bei der Erstellung und Aktualisierung von Pflegeplänen auf Basis von AEDL, Assessments und aktuellen Expertenstandards." />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="de_DE" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="SewaPlan | KI-Fachassistenz für ambulante Pflegeplanung" />
+    <meta name="twitter:description" content="SewaPlan unterstützt Pflegeteams bei der Erstellung und Aktualisierung von Pflegeplänen auf Basis von AEDL, Assessments und aktuellen Expertenstandards." />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://www.sewaplan.de/" />
+    <meta property="og:url" content="https://www.sewaplan.de/" />
+    <meta property="og:site_name" content="SewaPlan" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "SewaPlan",
+      "applicationCategory": "HealthApplication",
+      "description": "KI-Fachassistenz für ambulante Pflegeplanung. Pflegepläne nach AEDL auf Basis von aktuellen Expertenstandards und Assessments strukturiert erstellen und validieren.",
+      "operatingSystem": "Web",
+      "url": "https://www.sewaplan.de",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "EUR",
+        "description": "Kostenlose Testphase"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "ALTRA IT-Beratung",
+        "url": "https://www.altra-it.de",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Marienplatz 3",
+          "addressLocality": "Mülheim an der Ruhr",
+          "postalCode": "45476",
+          "addressCountry": "DE"
+        },
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "email": "info@altra-it.de",
+          "contactType": "sales"
+        }
+      },
+      "featureList": [
+        "AEDL-basierte Pflegeplanung",
+        "Automatische Planprüfung gegen Expertenstandards",
+        "KI-gestützte Planaktualisierung",
+        "Inline-Änderungsvorschläge mit Akzeptieren/Ablehnen",
+        "Vollständige Pflegepläne mit Problemen, Ressourcen, Zielen und Maßnahmen"
+      ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Was ist SewaPlan?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "SewaPlan ist eine KI-Fachassistenz für ambulante Pflegeplanung. Sie unterstützt Pflegeteams bei der Erstellung und Aktualisierung von Pflegeplänen auf Basis von AEDL, Assessments und aktuellen Expertenstandards."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Wie funktioniert die automatische Planprüfung?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Bestehende Pflegepläne werden gegen aktuelle Expertenstandards, dokumentierte Assessments und interne Konsistenzregeln geprüft. SewaPlan findet veraltete Maßnahmen, abgelaufene Zieldaten und inkonsistente Angaben. Konkrete Änderungsvorschläge erscheinen direkt im Plan."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Für wen ist SewaPlan geeignet?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "SewaPlan richtet sich an ambulante Pflegedienste im DACH-Raum. Es entlastet insbesondere die Pflegedienstleitung bei der Erstellung und Überarbeitung von Pflegeplänen."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Werden Patientendaten in die Cloud gesendet?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Nein. Patientendaten werden lokal verarbeitet. Es werden keine externen Cloud-Dienste für sensible Daten verwendet."
+          }
+        }
+      ]
+    }
+    </script>
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="site-header">
+        <a class="brand" href="#top" aria-label="SewaPlan Startseite">
+          <span class="brand-mark">S</span>
+          <span class="brand-text">SewaPlan</span>
+        </a>
+        <nav class="site-nav" aria-label="Hauptnavigation">
+          <a href="#nutzen">Nutzen</a>
+          <a href="#workflow">Ablauf</a>
+          <a href="#kontakt">Kontakt</a>
+        </nav>
+        <a class="button button-ghost" href="mailto:info@altra-it.de?subject=SewaPlan%20testen">SewaPlan testen</a>
+      </header>
+
+      <main id="top">
+
+        <!-- ═══════════════ 1. HERO ═══════════════ -->
+        <section class="hero section-grid">
+          <div class="hero-copy">
+            <p class="eyebrow">KI-Fachassistenz für ambulante Pflege</p>
+            <h1>Pflegepläne erstellen. Fachlich prüfen. Fundiert aktualisieren.</h1>
+            <p class="hero-text">
+              SewaPlan unterstützt Pflegeteams bei der Erstellung und Aktualisierung von Pflegeplänen auf Basis von AEDL, Assessments und aktuellen Expertenstandards.
+            </p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="#kontakt">Kostenlos ausprobieren</a>
+              <a class="button button-secondary" href="#workflow">Wie es funktioniert</a>
+            </div>
+            <ul class="hero-points" aria-label="Kernaussagen">
+              <li>Für ambulante Pflegedienste</li>
+              <li>Aus Beobachtungen und Assessments werden vollständige Pflegepläne</li>
+              <li>Fachliche Entscheidung bleibt beim Team</li>
+            </ul>
+          </div>
+
+          <!-- Mockup 1: Chat / Eingabe & Analyse -->
+          <div class="hero-visual" aria-label="SewaPlan Oberfläche">
+            <div class="mockup-scene">
+              <div class="mockup-window">
+                <div class="mockup-sidebar">
+                  <div class="ms-brand">SewaPlan</div>
+                  <div class="ms-search">
+                    <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                    <span>Suchen</span>
+                  </div>
+                  <div class="ms-meta"><span>Alle</span><span class="ms-add">Hinzufügen</span></div>
+                  <div class="ms-patients">
+                    <div class="ms-patient"><div class="ms-avatar"></div><div style="flex:1"><div class="ms-name-placeholder" style="width:70%"></div></div></div>
+                    <div class="ms-patient active"><span class="ms-avatar active">JD</span><span class="ms-name">Jane Doe</span></div>
+                    <div class="ms-patient"><div class="ms-avatar"></div><div style="flex:1"><div class="ms-name-placeholder" style="width:85%"></div></div></div>
+                    <div class="ms-patient"><div class="ms-avatar"></div><div style="flex:1"><div class="ms-name-placeholder" style="width:60%"></div></div></div>
+                    <div class="ms-patient"><div class="ms-avatar"></div><div style="flex:1"><div class="ms-name-placeholder" style="width:75%"></div></div></div>
+                    <div class="ms-patient"><div class="ms-avatar"></div><div style="flex:1"><div class="ms-name-placeholder" style="width:50%"></div></div></div>
+                    <div class="ms-patient"><div class="ms-avatar"></div><div style="flex:1"><div class="ms-name-placeholder" style="width:90%"></div></div></div>
+                    <div class="ms-patient"><div class="ms-avatar"></div><div style="flex:1"><div class="ms-name-placeholder" style="width:65%"></div></div></div>
+                  </div>
+                </div>
+                <div class="mockup-main">
+                  <div class="mm-header">
+                    <div class="mm-header-left"><span class="mm-label">Patient</span><span class="mm-title">Jane Doe</span></div>
+                    <div class="mm-actions">
+                      <span class="mm-btn">Dokumentation</span>
+                      <span class="mm-btn">Plan anzeigen</span>
+                      <span class="mm-btn">Plan überprüfen</span>
+                      <span class="mm-btn">Aktualisieren</span>
+                    </div>
+                  </div>
+                  <div class="mm-chat">
+                    <div class="mm-msg-row ai">
+                      <span class="mm-ai-icon"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="4"/><line x1="9" y1="9" x2="9" y2="9.01"/><line x1="15" y1="9" x2="15" y2="9.01"/><path d="M9 15h6"/></svg></span>
+                      <span class="mm-ai-text">Hi! Ich bin dein KI-Assistent für die Pflegeplanung. Wie kann ich dir mit Jane Doe helfen?</span>
+                    </div>
+                    <div class="mm-msg-row user">
+                      <div class="bubble-user">Patient benutzt nun innerhalb der Wohnung einen Rollator</div>
+                    </div>
+                    <div class="mm-msg-row ai">
+                      <div class="mm-card primary">
+                        <span class="mm-card-title">2 relevante AEDL-Bereiche</span>
+                        <span class="mm-card-sub">aus der Eingabe abgeleitet:</span>
+                        <ul><li>AEDL 02: Sich bewegen</li><li>AEDL 11: Für Sicherheit sorgen</li></ul>
+                      </div>
+                    </div>
+                    <div class="mm-msg-row ai">
+                      <div class="mm-card"><span class="mm-card-title">6 ähnliche Pflegefälle</span><span class="mm-card-sub">in der Datenbank gefunden.</span></div>
+                    </div>
+                    <div class="mm-msg-row ai">
+                      <div class="mm-card"><span class="mm-card-title">3 Expertenstandards</span><span class="mm-card-sub">passend zum Kontext ermittelt.</span></div>
+                    </div>
+                    <div class="mm-msg-row ai">
+                      <div class="mm-status">
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                        Prüfe Vollständigkeit der Eingabe…
+                        <span class="mm-spinner"></span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="mm-footer">
+                    <div class="mm-input"><span>Beschreibe die Situation des Patienten…</span><span class="mm-send"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg></span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ═══════════════ 2. NUTZEN ═══════════════ -->
+        <section id="nutzen" class="nutzen-section">
+          <div class="nutzen-header">
+            <p class="eyebrow">Warum SewaPlan</p>
+            <h2>Pflegepläne, die fachlich standhalten und im Alltag funktionieren.</h2>
+          </div>
+          <div class="nutzen-grid">
+            <div class="nutzen-card">
+              <div class="nutzen-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+              <h3>Immer auf dem neusten fachlichen Stand</h3>
+              <p>SewaPlan recherchiert Expertenstandards live und gleicht sie mit dem Pflegeplan ab. Wenn eine Maßnahme nicht mehr dem aktuellen Fachstandard entspricht, wird das Team direkt darauf hingewiesen, nicht erst bei der nächsten MD-Prüfung.</p>
+            </div>
+            <div class="nutzen-card">
+              <div class="nutzen-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
+              <h3>Vollständige Pläne statt Lücken</h3>
+              <p>SewaPlan erzeugt Pläne mit allen notwendigen Angaben: Probleme mit Ursachen und Symptomen, Ressourcen, Ziele mit Zeitrahmen und Maßnahmen mit konkreten Schritten, Häufigkeit und Zuständigkeit.</p>
+            </div>
+            <div class="nutzen-card">
+              <div class="nutzen-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+              <h3>Automatische Qualitätsprüfung</h3>
+              <p>Jeder Plan wird auf Vollständigkeit, Konsistenz und fachliche Korrektheit geprüft. Fehlende AEDL-Bereiche, inkonsistente Maßnahmen und Abweichungen von Expertenstandards werden erkannt.</p>
+            </div>
+            <div class="nutzen-card">
+              <div class="nutzen-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg></div>
+              <h3>Entlastung für die PDL</h3>
+              <p>Die Pflegedienstleitung verbringt weniger Zeit mit der Erstellung und Überarbeitung von Pflegeplänen. SewaPlan liefert fachlich fundierte Entwürfe auf Knopfdruck. Die PDL prüft, passt an und gibt frei.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- ═══════════════ 3. WORKFLOW ═══════════════ -->
+        <section id="workflow" class="workflow-section-lp">
+          <div class="workflow-header-lp">
+            <p class="eyebrow">In drei Schritten</p>
+            <h2>Von der Beobachtung zum fertigen Pflegeplan.</h2>
+          </div>
+          <div class="workflow-layout">
+            <div class="workflow-steps-lp">
+              <div class="wf-step">
+                <span class="wf-num">01</span>
+                <div>
+                  <h3>Situation beschreiben</h3>
+                  <p>Beschreiben Sie, was Sie beobachtet haben und wie die aktuelle Situation des Patienten aussieht. In eigenen Worten, ohne Fachformular. SewaPlan erkennt die relevanten AEDL-Bereiche automatisch.</p>
+                </div>
+              </div>
+              <div class="wf-step">
+                <span class="wf-num">02</span>
+                <div>
+                  <h3>Vorschläge prüfen und anpassen</h3>
+                  <p>SewaPlan generiert vollständige Planeinträge mit Problemen, Ressourcen, Zielen und Maßnahmen. Jeder Vorschlag kann einzeln akzeptiert, angepasst oder abgelehnt werden.</p>
+                </div>
+              </div>
+              <div class="wf-step">
+                <span class="wf-num">03</span>
+                <div>
+                  <h3>Freigeben und speichern</h3>
+                  <p>Wenn Sie mit den Vorschlägen zufrieden sind, übernehmen Sie die Einträge in den Pflegeplan. Bei manuellen Änderungen prüft SewaPlan zusätzlich auf Vollständigkeit und Konsistenz.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Mockup 2: Generierter Plan mit Vorschlägen -->
+            <div class="mockup-visual mockup-visual-right" aria-label="Generierter Pflegeplan">
+              <div class="mockup-scene scene-right">
+                <div class="mockup-window">
+                  <div class="mockup-sidebar">
+                    <div class="ms-brand">SewaPlan</div>
+                    <div class="ms-search"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg><span>Suchen</span></div>
+                    <div class="ms-meta"><span>Alle</span><span class="ms-add">Hinzufügen</span></div>
+                    <div class="ms-patients">
+                      <div class="ms-patient"><div class="ms-avatar"></div><div style="flex:1"><div class="ms-name-placeholder" style="width:70%"></div></div></div>
+                      <div class="ms-patient active"><span class="ms-avatar active">JD</span><span class="ms-name">Jane Doe</span></div>
+                      <div class="ms-patient"><div class="ms-avatar"></div><div style="flex:1"><div class="ms-name-placeholder" style="width:85%"></div></div></div>
+                      <div class="ms-patient"><div class="ms-avatar"></div><div style="flex:1"><div class="ms-name-placeholder" style="width:60%"></div></div></div>
+                      <div class="ms-patient"><div class="ms-avatar"></div><div style="flex:1"><div class="ms-name-placeholder" style="width:75%"></div></div></div>
+                      <div class="ms-patient"><div class="ms-avatar"></div><div style="flex:1"><div class="ms-name-placeholder" style="width:50%"></div></div></div>
+                      <div class="ms-patient"><div class="ms-avatar"></div><div style="flex:1"><div class="ms-name-placeholder" style="width:90%"></div></div></div>
+                      <div class="ms-patient"><div class="ms-avatar"></div><div style="flex:1"><div class="ms-name-placeholder" style="width:65%"></div></div></div>
+                    </div>
+                  </div>
+                  <div class="mockup-main">
+                    <div class="mm-header">
+                      <div class="mm-header-left"><span class="mm-label">Patient</span><span class="mm-title">Jane Doe</span></div>
+                      <div class="mm-actions">
+                        <span class="mm-btn">Dokumentation</span>
+                        <span class="mm-btn">Plan anzeigen</span>
+                        <span class="mm-btn">Plan überprüfen</span>
+                        <span class="mm-btn">Aktualisieren</span>
+                      </div>
+                    </div>
+                    <!-- Plan table content: NEW generated table -->
+                    <div class="mm-plan-area">
+                      <!-- NEW TABLE (green) -->
+                      <div class="mp-table mp-new">
+                        <div class="mp-table-header mp-header-new">
+                          <span class="mp-chevron">▼</span>
+                          <span class="mp-title">AEDL 02 <span class="mp-title-sub">Sich bewegen</span> - Mobilität</span>
+                          <span class="mp-badge mp-badge-new">Neu vorgeschlagen</span>
+                        </div>
+                        <div class="mp-col-headers mp-col-new">
+                          <span>PROBLEME</span><span>RESSOURCEN</span><span>ZIELE</span><span>MASSNAHMEN</span>
+                        </div>
+                        <div class="mp-grid mp-grid-new">
+                          <div class="mp-cell">
+                            <b>Beschreibung:</b><br>
+                            Eingeschränkte Mobilität innerhalb der Wohnung durch Nutzung eines Rollators.<br><br>
+                            <b>Ursachen:</b><br>
+                            <span class="mp-dot">Gangunsicherheit</span>
+                            <span class="mp-dot">Eingeschränkte Kraft in den unteren Extremitäten</span><br><br>
+                            <b>Symptome:</b><br>
+                            <span class="mp-dot">Unsicheres Gangbild</span>
+                            <span class="mp-dot">Festhalten an Möbeln</span>
+                          </div>
+                          <div class="mp-cell">
+                            <span class="mp-dot">Pat. ist motiviert, sich selbstständig zu bewegen</span>
+                            <span class="mp-dot">Rollator vorhanden und funktionstüchtig</span>
+                            <span class="mp-dot">Angehörige unterstützen bei Arztbesuchen</span>
+                          </div>
+                          <div class="mp-cell">
+                            Sichere Fortbewegung mit Rollator in allen Wohnräumen ohne Sturzereignis.<br>
+                            <span class="mp-meta">Erhaltungsziel</span>
+                            <span class="mp-meta">bis 31.12.2026</span>
+                          </div>
+                          <div class="mp-cell">
+                            <b>Begleitung bei Transfers</b><br>
+                            <span class="mp-meta">Frequenz: bei jedem Einsatz</span>
+                            <span class="mp-meta">Durchführend: PFK</span>
+                            <span class="mp-dot">Rollator vor Aufstehen in Reichweite stellen</span>
+                            <span class="mp-dot">Standsicherheit abwarten</span>
+                            <span class="mp-dot">Gehstrecke begleiten</span><br>
+                            <b>Wohnumfeld-Check</b><br>
+                            <span class="mp-meta">Frequenz: 1x monatlich</span>
+                            <span class="mp-meta">Durchführend: PFK</span>
+                            <span class="mp-dot">Stolperfallen prüfen</span>
+                            <span class="mp-dot">Beleuchtung kontrollieren</span>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- EXISTING TABLE with diff changes -->
+                      <div class="mp-table">
+                        <div class="mp-table-header">
+                          <span class="mp-chevron">▼</span>
+                          <span class="mp-title">AEDL 11 <span class="mp-title-sub">Für Sicherheit sorgen</span></span>
+                          <div class="mp-changes-badge">
+                            <span>2 Änderungen</span>
+                            <span class="mp-accept-all">✓ Alle</span>
+                            <span class="mp-reject-all">✗ Alle</span>
+                          </div>
+                        </div>
+                        <div class="mp-col-headers">
+                          <span>PROBLEME</span><span>RESSOURCEN</span><span>ZIELE</span><span>MASSNAHMEN</span>
+                        </div>
+                        <div class="mp-grid">
+                          <div class="mp-cell">
+                            <b>Beschreibung:</b><br>
+                            Sturzgefahr durch unsichere Gehfähigkeit und Nutzung eines Rollators.
+                          </div>
+                          <div class="mp-cell">
+                            <span class="mp-dot">Handlauf im Flur vorhanden</span>
+                            <span class="mp-dot">Pat. kooperativ</span>
+                          </div>
+                          <div class="mp-cell">
+                            <span class="mp-change-diff">
+                              <span class="mp-old">Allgemeine Sturzprophylaxe</span>
+                              <span class="mp-new-val">Keine Sturzereignisse im häuslichen Umfeld. Evaluation in 8 Wochen.</span>
+                              <span class="mp-action-bar"><span class="mp-btn-info">ℹ</span><span class="mp-divider"></span><span class="mp-btn-accept">✓</span><span class="mp-btn-reject">✗</span></span>
+                            </span>
+                          </div>
+                          <div class="mp-cell">
+                            Auf Sturzrisiko bei Transfers achten.<br><br>
+                            <span class="mp-change-add">
+                              <span class="mp-new-val">Sturzprotokoll bei jedem Vorfall führen. Frequenz: bei Ereignis. Durchführend: alle PK.</span>
+                              <span class="mp-action-bar"><span class="mp-btn-info">ℹ</span><span class="mp-divider"></span><span class="mp-btn-accept">✓</span><span class="mp-btn-reject">✗</span></span>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="mm-footer">
+                      <div class="mm-footer-btns">
+                        <span class="mm-save">Speichern</span>
+                        <span class="mm-discard">Verwerfen</span>
+                      </div>
+                      <div class="mm-input"><span>Beschreibe die Situation des Patienten…</span><span class="mm-send"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg></span></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ═══════════════ 4. PLANPRÜFUNG ═══════════════ -->
+        <section id="planpruefung" class="planpruefung-section">
+          <div class="planpruefung-layout">
+            <!-- Mockup 3: Planprüfung mit Inline-Vorschlägen -->
+            <div class="mockup-visual mockup-visual-left" aria-label="Automatische Planprüfung">
+              <div class="mockup-scene scene-front">
+                <div class="mockup-window">
+                  <div class="mockup-sidebar">
+                    <div class="ms-brand">SewaPlan</div>
+                    <div class="ms-search"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg><span>Suchen</span></div>
+                    <div class="ms-meta"><span>Alle</span><span class="ms-add">Hinzufügen</span></div>
+                    <div class="ms-patients">
+                      <div class="ms-patient"><div class="ms-avatar"></div><div style="flex:1"><div class="ms-name-placeholder" style="width:70%"></div></div></div>
+                      <div class="ms-patient active"><span class="ms-avatar active">JD</span><span class="ms-name">Jane Doe</span></div>
+                      <div class="ms-patient"><div class="ms-avatar"></div><div style="flex:1"><div class="ms-name-placeholder" style="width:85%"></div></div></div>
+                      <div class="ms-patient"><div class="ms-avatar"></div><div style="flex:1"><div class="ms-name-placeholder" style="width:60%"></div></div></div>
+                      <div class="ms-patient"><div class="ms-avatar"></div><div style="flex:1"><div class="ms-name-placeholder" style="width:75%"></div></div></div>
+                      <div class="ms-patient"><div class="ms-avatar"></div><div style="flex:1"><div class="ms-name-placeholder" style="width:50%"></div></div></div>
+                      <div class="ms-patient"><div class="ms-avatar"></div><div style="flex:1"><div class="ms-name-placeholder" style="width:90%"></div></div></div>
+                      <div class="ms-patient"><div class="ms-avatar"></div><div style="flex:1"><div class="ms-name-placeholder" style="width:65%"></div></div></div>
+                    </div>
+                  </div>
+                  <div class="mockup-main">
+                    <div class="mm-header">
+                      <div class="mm-header-left"><span class="mm-label">Patient</span><span class="mm-title">Jane Doe</span></div>
+                      <div class="mm-actions">
+                        <span class="mm-btn">Dokumentation</span>
+                        <span class="mm-btn">Plan anzeigen</span>
+                        <span class="mm-btn mm-btn-active">Plan überprüfen</span>
+                        <span class="mm-btn">Aktualisieren</span>
+                      </div>
+                    </div>
+                    <div class="mm-plan-area">
+                      <div class="mp-table">
+                        <div class="mp-table-header">
+                          <span class="mp-chevron">▼</span>
+                          <span class="mp-title">AEDL 02 <span class="mp-title-sub">Sich bewegen</span> - Mobilität</span>
+                          <div class="mp-changes-badge">
+                            <span>4 Änderungen</span>
+                            <span class="mp-accept-all">✓ Alle</span>
+                            <span class="mp-reject-all">✗ Alle</span>
+                          </div>
+                        </div>
+                        <div class="mp-col-headers">
+                          <span>PROBLEME</span><span>RESSOURCEN</span><span>ZIELE</span><span>MASSNAHMEN</span>
+                        </div>
+                        <div class="mp-grid">
+                          <!-- PROBLEME with hint -->
+                          <div class="mp-cell">
+                            <b>Beschreibung:</b><br>
+                            Erhöhte Sturzgefahr durch eingeschränkte Mobilität innerhalb der Wohnung.<br><br>
+                            <b>Ursachen:</b><br>
+                            <span class="mp-dot">Gangunsicherheit</span><br><br>
+                            <b>Symptome:</b><br>
+                            <span class="mp-dot">Unsicheres Gangbild</span>
+                            <span class="mp-dot">Festhalten an Möbeln</span><br><br>
+                            <!-- HINT -->
+                            <div class="mp-change-hint">
+                              <span class="mp-hint-icon">💡</span>
+                              <span class="mp-hint-text">Morse-Skala zur Sturzrisiko-Einschätzung sollte dokumentiert werden.</span>
+                            </div>
+                          </div>
+                          <!-- RESSOURCEN -->
+                          <div class="mp-cell">
+                            <span class="mp-dot">Pat. ist motiviert</span>
+                            <span class="mp-dot">Rollator vorhanden</span>
+                            <span class="mp-dot">Angehörige unterstützen</span>
+                          </div>
+                          <!-- ZIELE with remove (outdated date) -->
+                          <div class="mp-cell">
+                            <!-- REMOVE -->
+                            <span class="mp-change-remove">
+                              <span class="mp-old">Mobilität erhalten. bis 30.06.2025</span>
+                              <span class="mp-action-bar"><span class="mp-btn-info">ℹ</span><span class="mp-divider"></span><span class="mp-btn-accept">✓</span><span class="mp-btn-reject">✗</span></span>
+                            </span><br>
+                            <!-- DIFF -->
+                            <span class="mp-change-diff">
+                              <span class="mp-old">Sturzfreiheit anstreben</span>
+                              <span class="mp-new-val">Pat. bewegt sich sicher mit Rollator in allen Wohnräumen. Evaluation bis 31.12.2026.</span>
+                              <span class="mp-action-bar"><span class="mp-btn-info">ℹ</span><span class="mp-divider"></span><span class="mp-btn-accept">✓</span><span class="mp-btn-reject">✗</span></span>
+                            </span>
+                          </div>
+                          <!-- MASSNAHMEN with diff + add -->
+                          <div class="mp-cell">
+                            <!-- DIFF -->
+                            <span class="mp-change-diff">
+                              <span class="mp-old">Auf Sturzrisiko achten</span>
+                              <span class="mp-new-val">Sturzrisiko bei Transfers systematisch erfassen gemäß Expertenstandard Sturzprophylaxe (DNQP 2024).</span>
+                              <span class="mp-action-bar"><span class="mp-btn-info">ℹ</span><span class="mp-divider"></span><span class="mp-btn-accept">✓</span><span class="mp-btn-reject">✗</span></span>
+                            </span><br>
+                            Rollator bei Transfers begleiten.<br>
+                            <span class="mp-meta">Frequenz: bei jedem Einsatz</span><br><br>
+                            <!-- ADD -->
+                            <span class="mp-change-add">
+                              <span class="mp-new-val"><b>Wohnumfeld auf Stolperfallen prüfen</b><br>Frequenz: 1x monatlich<br>Durchführend: PFK</span>
+                              <span class="mp-action-bar"><span class="mp-btn-info">ℹ</span><span class="mp-divider"></span><span class="mp-btn-accept">✓</span><span class="mp-btn-reject">✗</span></span>
+                            </span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="mm-footer">
+                      <div class="mm-input"><span>Beschreibe die Situation des Patienten…</span><span class="mm-send"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg></span></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="planpruefung-copy">
+              <p class="eyebrow">Automatische Planprüfung</p>
+              <h2>SewaPlan erkennt, wenn ein Plan nicht mehr aktuell ist.</h2>
+              <p>Bestehende Pflegepläne werden gegen aktuelle Expertenstandards, dokumentierte Assessments und interne Konsistenzregeln geprüft. SewaPlan findet veraltete Maßnahmen, abgelaufene Zieldaten, fehlende Evaluierungen, doppelte Einträge, Sicherheitslücken und inkonsistente Angaben.</p>
+              <p>Konkrete Änderungsvorschläge erscheinen direkt im Plan mit Begründung. Das Team entscheidet per Klick, was übernommen wird.</p>
+              <div class="change-legend">
+                <span class="legend-item legend-diff"><span class="legend-dot"></span>Änderung</span>
+                <span class="legend-item legend-add"><span class="legend-dot"></span>Neuer Eintrag</span>
+                <span class="legend-item legend-remove"><span class="legend-dot"></span>Entfernung</span>
+                <span class="legend-item legend-hint"><span class="legend-dot"></span>Hinweis</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ═══════════════ 5. VERGLEICH ═══════════════ -->
+        <section id="vergleich" class="vergleich-section">
+          <div class="vergleich-header">
+            <p class="eyebrow">Für den Einsatz gemacht</p>
+            <h2>Pflegepläne mit allen Angaben, die im Alltag gebraucht werden.</h2>
+            
+            <p class="vergleich-intro-lead">
+              In vielen Pflegediensten sind Pflegepläne aus Zeitdruck zu knapp geschrieben.
+            </p>
+            <p class="vergleich-intro-sub">
+              Wichtige Angaben fehlen: Welche konkreten Schritte müssen durchgeführt werden? Wie oft? Durch wen? Das führt dazu, dass Pflegefachassistenten und Fachkräfte mit LK1 und LK2 im Einsatz improvisieren müssen.
+            </p>
+            <p class="vergleich-intro-solution">
+              <strong>SewaPlan erzeugt vollständige Einträge.</strong> Jede Maßnahme enthält eine Beschreibung, die Häufigkeit, die zuständige Rolle und alle Durchführungsschritte im Detail.
+            </p>
+          </div>
+          <div class="vergleich-grid">
+            <!-- Vorher -->
+            <div class="vergleich-card vergleich-before">
+              <span class="vergleich-label vergleich-label-before">Typischer Praxis-Plan</span>
+              <div class="vergleich-aedl-header">AEDL 02: Sich bewegen</div>
+              <div class="vergleich-content">
+                <div class="vc-section">
+                  <span class="vc-label">Problem</span>
+                  <p>Sturzgefahr, Pat. unsicher auf den Beinen</p>
+                </div>
+                <div class="vc-section">
+                  <span class="vc-label">Ressource</span>
+                  <p>–</p>
+                </div>
+                <div class="vc-section">
+                  <span class="vc-label">Ziel</span>
+                  <p>Mobilität erhalten</p>
+                </div>
+                <div class="vc-section">
+                  <span class="vc-label">Maßnahme</span>
+                  <p>Rollator bereitstellen, auf Sturzrisiko achten</p>
+                </div>
+              </div>
+            </div>
+            <!-- Nachher -->
+            <div class="vergleich-card vergleich-after">
+              <span class="vergleich-label vergleich-label-after">SewaPlan</span>
+              <div class="vergleich-aedl-header">AEDL 02: Sich bewegen</div>
+              <div class="vergleich-content">
+                <div class="vc-section">
+                  <span class="vc-label">Problem</span>
+                  <p><strong>Beschreibung:</strong> Erhöhte Sturzgefahr durch eingeschränkte Mobilität innerhalb der Wohnung seit Nutzung eines Rollators.</p>
+                  <p><strong>Ursachen:</strong> Gangunsicherheit, eingeschränkte Kraft in den unteren Extremitäten</p>
+                  <p><strong>Symptome:</strong> Unsicheres Gangbild, Festhalten an Möbeln, verlangsamte Bewegungsabläufe</p>
+                </div>
+                <div class="vc-section">
+                  <span class="vc-label">Ressourcen</span>
+                  <ul>
+                    <li>Patient ist motiviert, sich selbstständig zu bewegen</li>
+                    <li>Rollator vorhanden und funktionstüchtig</li>
+                    <li>Angehörige unterstützen bei Arztbesuchen</li>
+                  </ul>
+                </div>
+                <div class="vc-section">
+                  <span class="vc-label">Ziel</span>
+                  <p>Patient bewegt sich sicher mit Rollator in allen Wohnräumen ohne Sturzereignis.</p>
+                  <p class="vc-meta">Erhaltungsziel · Evaluation: 31.12.2026 · Priorität: Hoch</p>
+                </div>
+                <div class="vc-section">
+                  <span class="vc-label">Maßnahmen</span>
+                  <div class="vc-measure">
+                    <strong>1. Begleitung bei Transfers</strong>
+                    <p class="vc-meta">Frequenz: bei jedem Einsatz · Rolle: Pflegefachkraft</p>
+                    <ul>
+                      <li>Rollator vor dem Aufstehen in Reichweite stellen</li>
+                      <li>Standsicherheit nach dem Aufstehen abwarten</li>
+                      <li>Gehstrecke innerhalb der Wohnung begleiten</li>
+                      <li>Auf Schwindel oder Unsicherheit achten</li>
+                    </ul>
+                  </div>
+                  <div class="vc-measure">
+                    <strong>2. Wohnumfeld-Check</strong>
+                    <p class="vc-meta">Frequenz: 1x monatlich · Rolle: Pflegefachkraft</p>
+                    <ul>
+                      <li>Stolperfallen prüfen (Teppichkanten, Kabel, Türschwellen)</li>
+                      <li>Beleuchtung in Flur und Bad kontrollieren</li>
+                      <li>Haltegriffe auf festen Sitz prüfen</li>
+                    </ul>
+                  </div>
+                  <div class="vc-measure">
+                    <strong>3. Sturzprotokoll führen</strong>
+                    <p class="vc-meta">Frequenz: bei Sturzereignis · Rolle: alle Pflegekräfte</p>
+                    <ul>
+                      <li>Zeitpunkt, Ort und Umstände dokumentieren</li>
+                      <li>Verletzungen erfassen</li>
+                      <li>Hausarzt informieren bei Verletzung</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ═══════════════ 6. VERTRAUEN ═══════════════ -->
+        <section id="vertrauen" class="vertrauen-section">
+          <div class="vertrauen-header">
+            <p class="eyebrow">Vertrauen und Datenschutz</p>
+            <h2>Die fachliche Entscheidung bleibt immer beim Team.</h2>
+          </div>
+          <div class="vertrauen-grid">
+            <div class="vertrauen-card">
+              <div class="vertrauen-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+              <h3>KI-Vorschlag, kein Automatismus</h3>
+              <p>Jeder Vorschlag wird vom Pflegeteam geprüft und freigegeben. SewaPlan entscheidet nicht autonom.</p>
+            </div>
+            <div class="vertrauen-card">
+              <div class="vertrauen-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 3a2.85 2.83 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5Z"/></svg></div>
+              <h3>Jederzeit manuell anpassbar</h3>
+              <p>Das Team kann jeden Eintrag im Plan jederzeit selbst bearbeiten, ergänzen oder entfernen.</p>
+            </div>
+            <div class="vertrauen-card">
+              <div class="vertrauen-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
+              <h3>Daten bleiben lokal</h3>
+              <p>Patientendaten werden lokal verarbeitet. Keine externen Cloud-Dienste für sensible Daten.</p>
+            </div>
+            <div class="vertrauen-card">
+              <div class="vertrauen-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></div>
+              <h3>Nachvollziehbare Quellen</h3>
+              <p>Jeder Expertenstandard-Verweis zeigt die Quelle. Änderungsvorschläge zeigen, was sich warum ändert.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- ═══════════════ 7. CTA ═══════════════ -->
+        <section id="kontakt" class="cta-section-lp">
+          <div class="cta-panel-lp">
+            <h2>Bereit für vollständige Pflegeplanung?</h2>
+            <p>Testen Sie SewaPlan kostenlos in Ihrem Pflegedienst. Kein Vertrag, kein Risiko.</p>
+            <a class="button button-primary button-lg" href="mailto:info@altra-it.de?subject=SewaPlan%20testen">Jetzt kostenlos starten</a>
+          </div>
+        </section>
+
+      </main>
+
+      <!-- ═══════════════ FOOTER ═══════════════ -->
+      <footer class="site-footer">
+        <div class="footer-left">
+          <div class="brand">
+            <span class="brand-mark">S</span>
+            <span class="brand-text">SewaPlan</span>
+          </div>
+          <p class="footer-tagline">KI-Fachassistenz für ambulante Pflegeplanung</p>
+        </div>
+        <div class="footer-right">
+          <nav class="footer-nav">
+            <a href="#nutzen">Nutzen</a>
+            <a href="#workflow">Ablauf</a>
+            <a href="#kontakt">Kontakt</a>
+          </nav>
+          <div class="footer-legal">
+            <a href="https://www.altra-it.de/impressum" target="_blank" rel="noopener">Impressum</a>
+            <a href="https://www.altra-it.de/datenschutz" target="_blank" rel="noopener">Datenschutz</a>
+          </div>
+          <p class="footer-copy">© 2026 ALTRA IT-Beratung</p>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
