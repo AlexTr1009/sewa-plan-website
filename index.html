@@ -12,13 +12,19 @@
     <meta property="og:description" content="SewaPlan unterstützt Pflegeteams bei der Erstellung und Aktualisierung von Pflegeplänen auf Basis von AEDL, Assessments und aktuellen Expertenstandards." />
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="de_DE" />
+    <meta property="og:image" content="https://www.sewaplan.de/social-preview.svg" />
+    <meta property="og:image:alt" content="SewaPlan Vorschau zur KI-Fachassistenz fuer ambulante Pflegeplanung" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="SewaPlan | KI-Fachassistenz für ambulante Pflegeplanung" />
     <meta name="twitter:description" content="SewaPlan unterstützt Pflegeteams bei der Erstellung und Aktualisierung von Pflegeplänen auf Basis von AEDL, Assessments und aktuellen Expertenstandards." />
+    <meta name="twitter:image" content="https://www.sewaplan.de/social-preview.svg" />
     <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#2a9d8f" />
     <link rel="canonical" href="https://www.sewaplan.de/" />
     <meta property="og:url" content="https://www.sewaplan.de/" />
     <meta property="og:site_name" content="SewaPlan" />
+    <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+    <link rel="manifest" href="./site.webmanifest" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -26,6 +32,13 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./styles.css" />
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { dataLayer.push(arguments); }
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX');
+    </script>
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -115,12 +128,15 @@
           <span class="brand-mark">S</span>
           <span class="brand-text">SewaPlan</span>
         </a>
-        <nav class="site-nav" aria-label="Hauptnavigation">
+        <button class="nav-burger" id="navBurger" aria-label="Menü öffnen" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+        <nav class="site-nav" id="siteNav" aria-label="Hauptnavigation">
           <a href="#nutzen">Nutzen</a>
           <a href="#workflow">Ablauf</a>
           <a href="#kontakt">Kontakt</a>
         </nav>
-        <a class="button button-ghost" href="mailto:info@altra-it.de?subject=SewaPlan%20testen">SewaPlan testen</a>
+        <a class="button button-ghost nav-cta" href="mailto:info@altra-it.de?subject=SewaPlan%20testen">SewaPlan testen</a>
       </header>
 
       <main id="top">
@@ -409,8 +425,17 @@
         <!-- ═══════════════ 4. PLANPRÜFUNG ═══════════════ -->
         <section id="planpruefung" class="planpruefung-section">
           <div class="planpruefung-layout">
-            <!-- Mockup 3: Planprüfung mit Inline-Vorschlägen -->
-            <div class="mockup-visual mockup-visual-left" aria-label="Automatische Planprüfung">
+
+            <!-- Text zuerst -->
+            <div class="planpruefung-copy">
+              <p class="eyebrow">Automatische Planprüfung</p>
+              <h2>SewaPlan erkennt, wenn ein Plan nicht mehr aktuell ist.</h2>
+              <p>Bestehende Pflegepläne werden gegen aktuelle Expertenstandards, dokumentierte Assessments und interne Konsistenzregeln geprüft. SewaPlan findet veraltete Maßnahmen, abgelaufene Zieldaten, fehlende Evaluierungen, doppelte Einträge, Sicherheitslücken und inkonsistente Angaben.</p>
+              <p>Konkrete Änderungsvorschläge erscheinen direkt im Plan mit Begründung. Das Team entscheidet per Klick, was übernommen wird.</p>
+            </div>
+
+            <!-- Mockup zwischen Text und Legende -->
+            <div class="planpruefung-mockup" aria-label="Automatische Planprüfung">
               <div class="mockup-scene scene-front">
                 <div class="mockup-window">
                   <div class="mockup-sidebar">
@@ -515,18 +540,13 @@
               </div>
             </div>
 
-            <div class="planpruefung-copy">
-              <p class="eyebrow">Automatische Planprüfung</p>
-              <h2>SewaPlan erkennt, wenn ein Plan nicht mehr aktuell ist.</h2>
-              <p>Bestehende Pflegepläne werden gegen aktuelle Expertenstandards, dokumentierte Assessments und interne Konsistenzregeln geprüft. SewaPlan findet veraltete Maßnahmen, abgelaufene Zieldaten, fehlende Evaluierungen, doppelte Einträge, Sicherheitslücken und inkonsistente Angaben.</p>
-              <p>Konkrete Änderungsvorschläge erscheinen direkt im Plan mit Begründung. Das Team entscheidet per Klick, was übernommen wird.</p>
-              <div class="change-legend">
+            <!-- Legende als letztes Element -->
+            <div class="change-legend">
                 <span class="legend-item legend-diff"><span class="legend-dot"></span>Änderung</span>
                 <span class="legend-item legend-add"><span class="legend-dot"></span>Neuer Eintrag</span>
                 <span class="legend-item legend-remove"><span class="legend-dot"></span>Entfernung</span>
                 <span class="legend-item legend-hint"><span class="legend-dot"></span>Hinweis</span>
               </div>
-            </div>
           </div>
         </section>
 
@@ -540,7 +560,7 @@
               In vielen Pflegediensten sind Pflegepläne aus Zeitdruck zu knapp geschrieben.
             </p>
             <p class="vergleich-intro-sub">
-              Wichtige Angaben fehlen: Welche konkreten Schritte müssen durchgeführt werden? Wie oft? Durch wen? Das führt dazu, dass Pflegefachassistenten und Fachkräfte mit LK1 und LK2 im Einsatz improvisieren müssen.
+              Wichtige Angaben fehlen: Welche konkreten Schritte müssen durchgeführt werden? Wie oft? Durch wen? Das führt dazu, dass Pflegefachassistenten und Fachkräfte mit LG1 und LG2 im Einsatz improvisieren müssen.
             </p>
             <p class="vergleich-intro-solution">
               <strong>SewaPlan erzeugt vollständige Einträge.</strong> Jede Maßnahme enthält eine Beschreibung, die Häufigkeit, die zuständige Rolle und alle Durchführungsschritte im Detail.
@@ -702,6 +722,12 @@
 
     <script>
       const scrollBtn = document.getElementById('scrollTopBtn');
+      const trackEvent = (eventName, params = {}) => {
+        if (typeof window.gtag === 'function') {
+          window.gtag('event', eventName, params);
+        }
+      };
+
       window.addEventListener('scroll', () => {
         if (window.scrollY > 300) {
           scrollBtn.classList.add('visible');
@@ -711,6 +737,53 @@
       });
       scrollBtn.addEventListener('click', () => {
         window.scrollTo({ top: 0, behavior: 'smooth' });
+        trackEvent('scroll_to_top_click', {
+          event_category: 'engagement',
+          event_label: 'scroll_top_button'
+        });
+      });
+
+      // Burger menu
+      const burger = document.getElementById('navBurger');
+      const siteHeader = burger.closest('.site-header');
+      burger.addEventListener('click', () => {
+        const isOpen = siteHeader.classList.toggle('nav-open');
+        burger.setAttribute('aria-expanded', isOpen);
+        burger.setAttribute('aria-label', isOpen ? 'Menü schließen' : 'Menü öffnen');
+        trackEvent('navigation_toggle', {
+          event_category: 'navigation',
+          event_label: isOpen ? 'open' : 'close'
+        });
+      });
+      siteHeader.querySelectorAll('.site-nav a').forEach(link => {
+        link.addEventListener('click', () => {
+          siteHeader.classList.remove('nav-open');
+          burger.setAttribute('aria-expanded', 'false');
+          burger.setAttribute('aria-label', 'Menü öffnen');
+        });
+      });
+
+      document.querySelectorAll('a[href^="mailto:"]').forEach(link => {
+        link.addEventListener('click', () => {
+          const label = link.textContent.trim() || 'mailto_link';
+          trackEvent('generate_lead', {
+            event_category: 'conversion',
+            event_label: label,
+            value: 1
+          });
+        });
+      });
+
+      let hasTrackedDepth50 = false;
+      window.addEventListener('scroll', () => {
+        const scrollDepth = (window.scrollY + window.innerHeight) / document.documentElement.scrollHeight;
+        if (!hasTrackedDepth50 && scrollDepth >= 0.5) {
+          hasTrackedDepth50 = true;
+          trackEvent('scroll_depth_50', {
+            event_category: 'engagement',
+            event_label: '50_percent'
+          });
+        }
       });
     </script>
   </body>

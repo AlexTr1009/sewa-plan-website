@@ -273,7 +273,8 @@ li {
     0 42px 90px rgba(22, 37, 32, 0.16),
     0 18px 36px rgba(22, 37, 32, 0.08),
     0 0 0 1px rgba(255, 255, 255, 0.4);
-  height: 560px;
+  height: auto;
+  min-height: 480px;
   border: 1px solid rgba(22, 37, 32, 0.1);
   position: relative;
 }
@@ -1132,7 +1133,6 @@ h3 {
   display: flex;
   flex-direction: column;
   gap: 8px;
-  overflow: hidden;
   background:
     linear-gradient(180deg, rgba(249, 251, 250, 0.96), rgba(244, 248, 247, 0.94));
   transform-style: preserve-3d;
@@ -1464,22 +1464,24 @@ h3 {
 }
 
 .planpruefung-layout {
-  display: grid;
-  grid-template-columns: 1.2fr 1fr;
-  gap: 48px;
-  align-items: start;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
 }
 
 .planpruefung-copy {
-  padding-top: 24px;
+  text-align: center;
+  max-width: 720px;
 }
 
 .planpruefung-copy h2 {
   font-family: var(--font-heading);
   font-size: clamp(1.8rem, 3.6vw, 2.8rem);
-  max-width: 18ch;
   color: var(--text);
   line-height: 1.15;
+  max-width: none;
+  margin: 0 auto;
 }
 
 .planpruefung-copy p {
@@ -1489,12 +1491,21 @@ h3 {
   line-height: 1.7;
 }
 
+.planpruefung-mockup {
+  width: 100%;
+  max-width: 860px;
+  perspective: 1800px;
+  display: flex;
+  justify-content: center;
+}
+
 /* Change legend */
 .change-legend {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 14px;
-  margin-top: 28px;
+  margin-top: 0;
 }
 
 .legend-item {
@@ -1858,12 +1869,50 @@ h3 {
   color: var(--text);
 }
 
+/* ── Burger menu ── */
+.nav-burger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 40px;
+  height: 40px;
+  padding: 8px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+  flex-shrink: 0;
+  transition: background 0.2s;
+}
+
+.nav-burger:hover {
+  background: rgba(22, 37, 32, 0.06);
+}
+
+.nav-burger span {
+  display: block;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--text);
+  transition: transform 0.25s ease, opacity 0.2s ease;
+}
+
+.nav-burger[aria-expanded="true"] span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.nav-burger[aria-expanded="true"] span:nth-child(2) {
+  opacity: 0;
+}
+.nav-burger[aria-expanded="true"] span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
 /* ═══════════════ RESPONSIVE ═══════════════ */
 @media (max-width: 960px) {
   .nutzen-grid {
     grid-template-columns: 1fr;
   }
-  .site-header,
   .section-grid,
   .problem-strip,
   .workflow-grid,
@@ -1871,16 +1920,6 @@ h3 {
   .trust-grid,
   .audience-section {
     grid-template-columns: 1fr;
-  }
-
-  .site-header {
-    display: grid;
-    justify-content: stretch;
-  }
-
-  .site-nav {
-    flex-wrap: wrap;
-    gap: 14px;
   }
 
   .hero-copy,
@@ -1902,17 +1941,15 @@ h3 {
     min-height: auto;
     padding: 28px 12px 54px;
     border-radius: 28px;
+    overflow: hidden;
   }
 
   .mockup-scene,
   .scene-right,
   .scene-front {
     max-width: 100%;
-    transform: rotateX(12deg) rotateY(-10deg) rotateZ(-3deg);
-  }
-
-  .mockup-window {
-    height: 480px;
+    transform: rotateX(6deg) rotateY(-8deg);
+    zoom: 0.85;
   }
 
   .mockup-sidebar {
@@ -1927,15 +1964,6 @@ h3 {
   .workflow-layout {
     grid-template-columns: 1fr;
     gap: 40px;
-  }
-
-  .planpruefung-layout {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
-
-  .mockup-visual-left {
-    order: -1;
   }
 
   .vergleich-grid {
@@ -1954,6 +1982,56 @@ h3 {
 
   .footer-right {
     text-align: left;
+  }
+}
+
+@media (max-width: 768px) {
+  .mockup-scene,
+  .scene-right,
+  .scene-front {
+    zoom: 0.7;
+  }
+
+  .nav-burger {
+    display: flex;
+  }
+
+  .site-nav,
+  .nav-cta {
+    display: none;
+  }
+
+  .site-header {
+    flex-wrap: wrap;
+  }
+
+  .site-header.nav-open .site-nav {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 12px 0 8px;
+    border-top: 1px solid var(--line);
+    gap: 2px;
+    margin-top: 8px;
+  }
+
+  .site-header.nav-open .site-nav a {
+    padding: 10px 12px;
+    font-size: 1.05rem;
+    border-radius: 8px;
+    transition: background 0.15s, padding-left 0.15s;
+  }
+
+  .site-header.nav-open .site-nav a:hover {
+    background: rgba(42, 157, 143, 0.07);
+    padding-left: 18px;
+  }
+
+  .site-header.nav-open .nav-cta {
+    display: flex;
+    width: 100%;
+    margin: 4px 0 8px;
+    justify-content: center;
   }
 }
 
@@ -1990,17 +2068,11 @@ h3 {
   .scene-right,
   .scene-front {
     transform: none;
+    zoom: 0.55;
   }
 
   .mockup-window {
-    height: 430px;
     border-radius: 16px;
-  }
-
-  .mockup-sidebar {
-    width: 0;
-    min-width: 0;
-    display: none;
   }
 
   .problem-strip,
