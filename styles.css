@@ -128,19 +128,29 @@ li {
   color: var(--text);
 }
 
-.brand-mark {
+.brand-mark-img {
   width: 36px;
   height: 36px;
-  display: grid;
-  place-items: center;
-  border-radius: 12px;
-  background: linear-gradient(135deg, var(--accent) 0%, #5cc4b5 100%);
-  color: white;
-  box-shadow: 0 10px 24px rgba(42, 157, 143, 0.2);
+  object-fit: contain;
+  /* Optional: filter: drop-shadow(0 10px 24px rgba(42, 157, 143, 0.2)); if shadow is wanted */
 }
 
 .brand-text {
-  font-size: 1rem;
+  font-size: 1.1rem;
+}
+
+.brand-sewa {
+  background: linear-gradient(135deg, #61a8a7 0%, #86c2c1 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+
+.brand-plan {
+  background: linear-gradient(135deg, #4a8e8c 0%, #1b5953 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
 }
 
 .site-nav {
