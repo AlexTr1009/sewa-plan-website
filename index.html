@@ -32,13 +32,6 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./styles.css" />
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() { dataLayer.push(arguments); }
-      gtag('js', new Date());
-      gtag('config', 'G-XXXXXXXXXX');
-    </script>
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -709,6 +702,7 @@
           <div class="footer-legal">
             <a href="https://www.altra-it.de/impressum" target="_blank" rel="noopener">Impressum</a>
             <a href="https://www.altra-it.de/datenschutz" target="_blank" rel="noopener">Datenschutz</a>
+            <a href="#cookie-settings" id="openCookieSettings">Cookie-Einstellungen</a>
           </div>
           <p class="footer-copy">© 2026 ALTRA IT-Beratung</p>
         </div>
@@ -720,7 +714,72 @@
       <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
     </button>
 
+    <!-- Cookie Banner -->
+    <div id="cookieBanner" class="cookie-banner">
+      <div class="cookie-content">
+        <div class="cookie-text">
+          <h3 class="cookie-title">Datenschutz & Cookies</h3>
+          <p>
+            Wir nutzen Cookies auf unserer Website. Einige von ihnen sind essenziell für den Betrieb der Seite, 
+            während andere uns helfen, diese Website und das Nutzererlebnis durch anonymisierte Statistiken zu verbessern (Google Analytics).
+            Sie können selbst entscheiden, ob Sie die Cookies zulassen möchten. Weitere Informationen finden Sie in unserer 
+            <a href="https://www.altra-it.de/datenschutz" target="_blank" rel="noopener">Datenschutzerklärung</a>.
+          </p>
+        </div>
+        <div class="cookie-actions">
+          <button id="btnDeclineCookies" class="button button-ghost btn-cookie">Nur essenzielle</button>
+          <button id="btnAcceptCookies" class="button button-primary btn-cookie">Alle akzeptieren</button>
+        </div>
+      </div>
+    </div>
+
     <script>
+      // Cookie Consent Logic
+      const cookieBanner = document.getElementById('cookieBanner');
+      const btnAccept = document.getElementById('btnAcceptCookies');
+      const btnDecline = document.getElementById('btnDeclineCookies');
+      const GA_TRACKING_ID = 'G-THLYMWL44Y'; // <-- HIER DEINE ECHTE ID EINTRAGEN
+
+      function loadGoogleAnalytics() {
+        const script = document.createElement('script');
+        script.async = true;
+        script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`;
+        document.head.appendChild(script);
+
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        window.gtag = gtag;
+        gtag('js', new Date());
+        gtag('config', GA_TRACKING_ID, { 'anonymize_ip': true });
+      }
+
+      function initCookieConsent() {
+        const consent = localStorage.getItem('sewaplan_cookie_consent');
+        if (!consent) {
+          cookieBanner.style.display = 'block';
+        } else if (consent === 'accepted') {
+          loadGoogleAnalytics();
+        }
+      }
+
+      btnAccept.addEventListener('click', () => {
+        localStorage.setItem('sewaplan_cookie_consent', 'accepted');
+        cookieBanner.style.display = 'none';
+        loadGoogleAnalytics();
+      });
+
+      btnDecline.addEventListener('click', () => {
+        localStorage.setItem('sewaplan_cookie_consent', 'declined');
+        cookieBanner.style.display = 'none';
+      });
+
+      initCookieConsent();
+
+      document.getElementById('openCookieSettings').addEventListener('click', (e) => {
+        e.preventDefault();
+        cookieBanner.style.display = 'block';
+      });
+
       const scrollBtn = document.getElementById('scrollTopBtn');
       const trackEvent = (eventName, params = {}) => {
         if (typeof window.gtag === 'function') {
