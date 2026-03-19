@@ -140,7 +140,7 @@ li {
 }
 
 .brand-sewa {
-  background: linear-gradient(135deg, #61a8a7 0%, #86c2c1 100%);
+  background: linear-gradient(135deg,  #86c2c1 0%, #61a8a7 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   display: inline-block;
