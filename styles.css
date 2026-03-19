@@ -625,7 +625,7 @@ li {
 .mm-discard {
   font-size: 0.56rem;
   font-weight: 600;
-  color: #e06050;
+  color: var(--text);
   text-align: center;
   padding: 2px 10px;
 }
