@@ -1,0 +1,15 @@
+{
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "sewaplan.de"
+        }
+      ],
+      "destination": "https://www.sewaplan.de/$1",
+      "permanent": true
+    }
+  ]
+}
